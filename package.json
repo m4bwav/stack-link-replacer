@@ -1,0 +1,16 @@
+{
+  "name": "stack-link-replacer",
+  "version": "1.0.0",
+  "description": "Script to replace a text link (ie http://whatever) with the title at the links webpage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "stackexchange": "~0.3.0",
+    "request": "~2.72.0",
+    "cheerio": "~0.20.0"
+  }
+}
