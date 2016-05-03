@@ -1,5 +1,5 @@
 'use strict';
-var stackexchange = require('stackexchange')
+var markdownRetriever = require('./markdown-retriever.js')
   , request = require('request')
   , cheerio = require('cheerio')
   ;
@@ -20,31 +20,15 @@ function replaceLinksInMarkDown(markdown){
   });
 }
 
-function retrieveMarkdown(options){
-  var stackApiOptions = { 
-	version: 2.2,
-	site: options.site  
-	};
-  var stackContext = new stackexchange(stackApiOptions);
-  
-  if(!options.entityId){
-	  throw "Need an entity id to edit"
-  }
-  
-  var filter = {
-    //key: 'YOUR_API_KEY',
-    order: 'asc',
-	filter: options.filter
-  };
-  // Get all the questions (http://api.stackexchange.com/docs/questions) 
-  stackContext.questions.questions(filter, function(err, results){
-    if (err) throw err;
+exports.executeLinkReplacement = function(options){
+	var markdownCallback = function(markdown, err){
+		if(err){
+			throw err;
+		}
     
 	console.log("Results: ");
-    console.log(results);
-  }, [options.entityId]);
-}
-
-exports.executeLinkReplacement = function(options){
-	retrieveMarkdown(options);
+    console.log(markdown);
+  };
+	
+	markdownRetriever(options, markdownCallback);
 };
