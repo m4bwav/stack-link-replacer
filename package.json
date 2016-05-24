@@ -1,28 +1,59 @@
 {
   "name": "stack-link-replacer",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "Script to replace a text link (ie http://whatever) with the title at the links webpage.",
-  "main": "./lib/index.js",
+  "main": "./index.js",
   "files": [
-    "index.js",
     "lib"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository":  { 
-	"type": "git",
-	"url": "https://github.com/m4bwav/stack-link-replacer.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m4bwav/stack-link-replacer.git"
   },
   "homepage": "https://github.com/m4bwav/stack-link-replacer",
   "author": "Mark Rogers",
-  "keywords": ["stackexchange", "stackoverflow", "markup", "html", "markdown"],
-  "tags": ["stackexchange", "stackoverflow", "markup", "html", "markdown"],
+  "keywords": [
+    "stackexchange",
+    "stackoverflow",
+    "markup",
+    "html",
+    "markdown"
+  ],
+  "tags": [
+    "stackexchange",
+    "stackoverflow",
+    "markup",
+    "html",
+    "markdown"
+  ],
   "license": "MIT",
   "dependencies": {
-    "stackexchange": "~0.3.0",
-    "request": "~2.72.0",
-    "cheerio": "~0.20.0",
-    "minimist": "~1.2.0"
+    "debug": "^2.2.0",
+    "markdown-plain-link-replacer": "1.0.12",
+    "minimist": "~1.2.0",
+    "request": "^2.72.0",
+    "stackexchange": "~0.3.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "execa": "^0.4.0",
+    "coveralls": "^2.11.9",
+    "codecov.io": "^0.1.6",
+    "nyc": "^6.4.4",
+    "xo": "^0.15.0",
+    "snyk": "^1.14.3"
+  },
+  "xo": {
+    "rules": {
+      "xo/no-process-exit": "off",
+      "linebreak-style": "off",
+      "indent": [
+        "error",
+        2
+      ]
+    }
   }
 }

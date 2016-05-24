@@ -31,3 +31,8 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+/lib/myExpressApp/views
+/lib/myExpressApp/public/stylesheets
+/lib/myExpressApp/routes
+/lib/myExpressApp/bin
+/lib/myExpressApp
