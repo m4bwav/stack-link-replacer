@@ -4,7 +4,7 @@ This repository is an old npm package and command-line tool from 2016. It isn't 
 
 ## Reporting a problem
 
-You can still open an issue or a pull request and I'll take a look, though a fix isn't promised. If something shouldn't be public (a password or token committed to the repository, for example), open the repository's **Security** tab and choose **Report a vulnerability** instead. Only the maintainer sees those reports.
+You can still open an issue or a pull request and I'll take a look, though a fix isn't promised. You can also report privately: open the repository's **Security** tab and choose **Report a vulnerability**.
 
 ## Supported versions
 
